@@ -1,4 +1,4 @@
-public class Pessoa {
+public abstract class Pessoa {
     private Escolaridade escolaridade;
 
     public Escolaridade getEscolaridade() {
