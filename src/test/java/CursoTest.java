@@ -6,7 +6,8 @@ class CursoTest {
 
     @Test
     public void qualEscolaridadeCoordenador() {
-        Curso curso = new Curso(new Professor("doutorado"));
+        Cidade cidade = new Cidade("Santos Dumont", "MG");
+        Curso curso = new Curso(new Professor(cidade,"doutorado"));
         assertEquals("doutorado", curso.obterEscolaridadeCoordenador());
     }
 

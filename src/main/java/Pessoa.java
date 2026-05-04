@@ -19,7 +19,7 @@ public abstract class Pessoa {
 
     public void setNaturalidade(Cidade naturalidade) {
         if (naturalidade == null){
-            throw new NullPointerException("Naturalidade não pode ser null")
+            throw new NullPointerException("Naturalidade não pode ser null");
         }
         this.naturalidade = naturalidade;
     }

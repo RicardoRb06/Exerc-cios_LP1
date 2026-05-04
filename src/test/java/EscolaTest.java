@@ -6,7 +6,8 @@ class EscolaTest {
 
     @Test
     public void qualEscolaridadeDiretor() {
-        Escola escola = new Escola(new Professor("doutor"));
+        Cidade cidade = new Cidade("Santos Dumont", "MG");
+        Escola escola = new Escola(new Professor(cidade, "doutor"));
         assertEquals("doutor", escola.obterEscolaridadeDiretor());
     }
 

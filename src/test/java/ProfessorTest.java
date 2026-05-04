@@ -6,14 +6,16 @@ class ProfessorTest {
 
     @Test
     public void qualEscolaridadeProfessor(){
-        Professor professor = new Professor("doutorado");
+        Cidade cidade = new Cidade("Santos Dumont", "MG");
+        Professor professor = new Professor(cidade, "doutorado");
         assertEquals("doutorado", professor.obterEscolaridade());
     }
 
     @Test
     public void verificaEscolaridadeNull() {
         try{
-            Professor professor = new Professor(null);
+            Cidade cidade = new Cidade("Santos Dumont", "MG");
+            Professor professor = new Professor(cidade, null);
             fail();
         } catch (NullPointerException e){
             assertEquals("Escolaridade não pode ser null", e.getMessage());
