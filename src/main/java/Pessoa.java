@@ -1,5 +1,6 @@
 public abstract class Pessoa {
     private Escolaridade escolaridade;
+    private Cidade naturalidade;
 
     public Escolaridade getEscolaridade() {
         return escolaridade;
@@ -12,12 +13,27 @@ public abstract class Pessoa {
         this.escolaridade = new Escolaridade(escolaridade);
     }
 
-    public Pessoa() {
+    public Cidade getNaturalidade() {
+        return naturalidade;
     }
 
-    public Pessoa(String escolaridade) {
+    public void setNaturalidade(Cidade naturalidade) {
+        if (naturalidade == null){
+            throw new NullPointerException("Naturalidade não pode ser null")
+        }
+        this.naturalidade = naturalidade;
+    }
+
+    public Pessoa(Cidade naturalidade) {
+        this.setNaturalidade(naturalidade);
+    }
+
+    public Pessoa(Cidade naturalidade, String escolaridade) {
+        this.setNaturalidade(naturalidade);
         this.setEscolaridade(escolaridade);
     }
+
+
 
     public String obterEscolaridade() {
         if(escolaridade == null){
