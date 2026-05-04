@@ -5,17 +5,17 @@ public abstract class Pessoa {
         return escolaridade;
     }
 
-    public void setEscolaridade(Escolaridade escolaridade) {
+    public void setEscolaridade(String escolaridade) {
         if(escolaridade == null) {
             throw new NullPointerException("Escolaridade não pode ser null");
         }
-        this.escolaridade = escolaridade;
+        this.escolaridade = new Escolaridade(escolaridade);
     }
 
     public Pessoa() {
     }
 
-    public Pessoa(Escolaridade escolaridade) {
+    public Pessoa(String escolaridade) {
         this.setEscolaridade(escolaridade);
     }
 

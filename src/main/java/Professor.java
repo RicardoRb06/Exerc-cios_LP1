@@ -1,5 +1,5 @@
 public class Professor extends Pessoa{
-    public Professor(Escolaridade escolaridade) {
+    public Professor(String escolaridade) {
         super(escolaridade);
     }
 }
