@@ -34,7 +34,7 @@ public abstract class Pessoa {
     }
 
     public String obterEstadoNaturalidade() {
-        return naturalidade.obterEstadoNome();
+        return naturalidade.obterEstado();
     }
 
     public String obterEscolaridade() {

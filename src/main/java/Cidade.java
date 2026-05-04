@@ -25,4 +25,8 @@ public class Cidade {
     public void setEstado(String estado) {
         this.estado = new Estado(estado);
     }
+
+    public String obterEstado() {
+        return this.estado.getNome();
+    }
 }
