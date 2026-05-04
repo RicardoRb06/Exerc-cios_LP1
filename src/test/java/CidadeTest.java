@@ -10,7 +10,7 @@ class CidadeTest {
             Cidade cidade = new Cidade(null, "MG");
             fail();
         }catch (NullPointerException e){
-            assertEquals("Nome não pode ser null", e.getMessage());
+            assertEquals("Cidade não pode ser null", e.getMessage());
         }
     }
 }
