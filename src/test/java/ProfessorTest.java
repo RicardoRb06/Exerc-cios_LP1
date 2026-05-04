@@ -6,7 +6,7 @@ class ProfessorTest {
 
     @Test
     public void qualEscolaridadeProfessor(){
-        Professor professor = new Professor(new Escolaridade("doutorado"));
+        Professor professor = new Professor("doutorado");
         assertEquals("doutorado", professor.obterEscolaridade());
     }
 
