@@ -8,4 +8,11 @@ public abstract class Pessoa {
     public void setEscolaridade(Escolaridade escolaridade) {
         this.escolaridade = escolaridade;
     }
+
+    public String obterEscolaridade() {
+        if(escolaridade == null){
+            throw new NullPointerException("Essa pessoa não tem escolaridade");
+        }
+        return escolaridade.getNome();
+    }
 }
