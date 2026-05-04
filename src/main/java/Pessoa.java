@@ -6,6 +6,9 @@ public abstract class Pessoa {
     }
 
     public void setEscolaridade(Escolaridade escolaridade) {
+        if(escolaridade == null) {
+            throw new NullPointerException("Escolaridade não pode ser null");
+        }
         this.escolaridade = escolaridade;
     }
 
@@ -13,7 +16,7 @@ public abstract class Pessoa {
     }
 
     public Pessoa(Escolaridade escolaridade) {
-        this.escolaridade = escolaridade;
+        this.setEscolaridade(escolaridade);
     }
 
     public String obterEscolaridade() {
