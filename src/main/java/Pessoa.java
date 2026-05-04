@@ -33,7 +33,9 @@ public abstract class Pessoa {
         this.setEscolaridade(escolaridade);
     }
 
-
+    public String obterEstadoNaturalidade() {
+        return naturalidade.obterEstadoNome();
+    }
 
     public String obterEscolaridade() {
         if(escolaridade == null){
