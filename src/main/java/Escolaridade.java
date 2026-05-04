@@ -1,6 +1,10 @@
 public class Escolaridade {
     private String nome
 
+    public Escolaridade(String nome) {
+        this.nome = nome;
+    }
+
     public String getNome() {
         return nome;
     }
