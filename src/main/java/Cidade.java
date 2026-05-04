@@ -23,9 +23,6 @@ public class Cidade {
     }
 
     public void setEstado(String estado) {
-        if(estado == null){
-            throw new NullPointerException("Estado não pode ser null");
-        }
         this.estado = new Estado(estado);
     }
 }
