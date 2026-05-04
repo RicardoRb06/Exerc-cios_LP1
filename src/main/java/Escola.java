@@ -10,7 +10,7 @@ public class Escola {
     }
 
     public void setDiretor(Professor diretor) {
-        if(coordenador == null){
+        if(diretor == null){
             throw new NullPointerException("Diretor não pode ser null");
         }
         this.diretor = diretor;
