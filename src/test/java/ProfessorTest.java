@@ -15,7 +15,7 @@ class ProfessorTest {
     public void qualCidadeProfessor(){
         Cidade cidade = new Cidade("Santos Dumont", "MG");
         Professor professor = new Professor(cidade, "doutorado");
-        assertEquals("Santos Dumont", professor.obterCidade());
+        assertEquals("Santos Dumont", professor.obterCidadeNaturalidade());
     }
 
     @Test
