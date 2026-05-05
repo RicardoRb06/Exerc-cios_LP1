@@ -23,4 +23,11 @@ public class Aluno extends Pessoa{
         }
         return this.curso.obterEstado();
     }
+
+    public String obterCoordenadorCurso(){
+        if (this.curso == null) {
+            throw new NullPointerException("Curso não pode ser null");
+        }
+        this.curso.getCoordenadorNome();
+    }
 }
