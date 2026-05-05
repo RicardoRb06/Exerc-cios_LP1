@@ -9,7 +9,8 @@ class AlunoTest {
         Aluno aluno = new Aluno(cidade);
         Professor professor = new Professor(cidade, "doutorado");
         professor.setNome("Marco");
-        Curso curso = new Curso(cidade, professor, new TipoEnsino("ensino superior"));
+        Escola escola = new Escola(cidade, professor);
+        Curso curso = new Curso(escola, professor, new TipoEnsino("ensino superior"));
         aluno.setCurso(curso);
 
         assertEquals("Marco", aluno.obterCoordenadorCurso());
@@ -26,7 +27,8 @@ class AlunoTest {
     public void qualEstadoEstuda() {
         Cidade cidade = new Cidade("Santos Dumont", "MG");
         Cidade cidade1 = new Cidade("Rio de janeiro", "RJ");
-        Curso curso = new Curso(cidade1, new Professor(cidade1, "doutorado"), new TipoEnsino("ensino fundamental"));
+        Professor professor = new Professor(cidade1, "doutorado");
+        Curso curso = new Curso(new Escola(cidade1, professor), professor, new TipoEnsino("ensino fundamental"));
         Aluno aluno = new Aluno(cidade);
         aluno.setCurso(curso);
         assertEquals("RJ", aluno.obterEstadoEstuda());

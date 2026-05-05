@@ -5,25 +5,43 @@ import static org.junit.jupiter.api.Assertions.*;
 class ProfessorTest {
 
     @Test
-    public void quemDiretorCurso() {
+    public void quemCoordenador() {
         Cidade cidade = new Cidade("Santos Dumont", "MG");
         Professor professor = new Professor(cidade, "doutorado");
         Professor professor1 = new Professor(cidade, "doutorado");
+        Escola escola = new Escola(cidade, professor);
 
         professor.setNome("Marco");
         professor1.setNome("Sandro");
 
-        Curso curso = new Curso(cidade, professor, "superior");
+        Curso curso = new Curso(escola, professor1, new TipoEnsino("superior"));
+        professor.setContratacao(curso);
+
+        assertEquals("Sandro", professor.obterCoordenadorNome());
+    }
+
+    @Test
+    public void quemDiretorCurso() {
+        Cidade cidade = new Cidade("Santos Dumont", "MG");
+        Professor professor = new Professor(cidade, "doutorado");
+        Professor professor1 = new Professor(cidade, "doutorado");
+        Escola escola = new Escola(cidade, professor);
+
+        professor.setNome("Marco");
+        professor1.setNome("Sandro");
+
+        Curso curso = new Curso(escola, professor, new TipoEnsino("superior"));
         professor1.setContratacao(curso);
 
-        assertEquals("Marco", professor1.getDiretor());
+        assertEquals("Marco", professor1.obterDiretorNome());
     }
 
     @Test
     public void qualTipoEnsinoProfessor(){
         Cidade cidade = new Cidade("Santos Dumont", "MG");
         Professor professor = new Professor(cidade, "doutorado");
-        Curso curso = new Curso(cidade, professor, new TipoEnsino("ensino fundamental"));
+        Escola escola = new Escola(cidade, professor);
+        Curso curso = new Curso(escola, professor, new TipoEnsino("ensino fundamental"));
         professor.setContratacao(curso);
         assertEquals("ensino fundamental", professor.obterTipoEnsino());
     }

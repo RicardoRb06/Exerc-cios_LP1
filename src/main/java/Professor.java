@@ -19,4 +19,12 @@ public class Professor extends Pessoa{
         }
         return contratacao.obterTipoEnsino();
     }
+
+    public String obterDiretorNome(){
+        return this.contratacao.obterDiretorNome();
+    }
+
+    public String obterCoordenadorNome(){
+        return this.contratacao.obterCoordenadorNome();
+    }
 }

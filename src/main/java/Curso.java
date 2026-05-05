@@ -1,10 +1,10 @@
 public class Curso {
     private Professor coordenador;
-    private Cidade cidade;
+    private Escola escola;
     private TipoEnsino tipoEnsino;
 
-    public Curso(Cidade cidade, Professor coordenador, TipoEnsino tipoEnsino) {
-        this.setCidade(cidade);
+    public Curso(Escola escola, Professor coordenador, TipoEnsino tipoEnsino) {
+        this.setEscola(escola);
         this.setCoordenador(coordenador);
         this.setTipoEnsino(tipoEnsino);
     }
@@ -17,12 +17,12 @@ public class Curso {
         this.tipoEnsino = tipoEnsino;
     }
 
-    public Cidade getCidade() {
-        return cidade;
+    public Escola getEscola() {
+        return escola;
     }
 
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
+    public void setEscola(Escola escola) {
+        this.escola = escola;
     }
 
     public Professor getCoordenador() {
@@ -41,7 +41,7 @@ public class Curso {
     }
 
     public String obterEstado() {
-        return this.cidade.obterEstado();
+        return this.escola.obterEstado();
     }
 
     public String obterTipoEnsino() {
@@ -50,5 +50,9 @@ public class Curso {
 
     public String obterCoordenadorNome(){
         return this.coordenador.getNome();
+    }
+
+    public String obterDiretorNome(){
+        return this.escola.obterDiretorNome();
     }
 }
