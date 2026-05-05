@@ -6,6 +6,15 @@ public class Curso {
     public Curso(Cidade cidade, Professor coordenador, TipoEnsino tipoEnsino) {
         this.setCidade(cidade);
         this.setCoordenador(coordenador);
+        this.setTipoEnsino(tipoEnsino);
+    }
+
+    public TipoEnsino getTipoEnsino() {
+        return tipoEnsino;
+    }
+
+    public void setTipoEnsino(TipoEnsino tipoEnsino) {
+        this.tipoEnsino = tipoEnsino;
     }
 
     public Cidade getCidade() {
