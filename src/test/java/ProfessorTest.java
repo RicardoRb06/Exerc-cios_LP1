@@ -5,6 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class ProfessorTest {
 
     @Test
+    public void qualTipoEnsinoProfessor(){
+
+    }
+
+    @Test
     public void qualEscolaridadeProfessor(){
         Cidade cidade = new Cidade("Santos Dumont", "MG");
         Professor professor = new Professor(cidade, "doutorado");
