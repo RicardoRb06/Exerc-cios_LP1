@@ -17,6 +17,6 @@ public class Professor extends Pessoa{
         if(this.contratacao == null){
             throw new NullPointerException("Curso não pode ser null");
         }
-        contratacao.obterTipoEnsino();
+        return contratacao.obterTipoEnsino();
     }
 }

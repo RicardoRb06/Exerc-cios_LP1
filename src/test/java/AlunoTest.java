@@ -14,7 +14,7 @@ class AlunoTest {
     public void qualEstadoEstuda() {
         Cidade cidade = new Cidade("Santos Dumont", "MG");
         Cidade cidade1 = new Cidade("Rio de janeiro", "RJ");
-        Curso curso = new Curso(cidade1, new Professor(cidade1, "doutorado"));
+        Curso curso = new Curso(cidade1, new Professor(cidade1, "doutorado"), new TipoEnsino("ensino fundamental"));
         Aluno aluno = new Aluno(cidade);
         aluno.setCurso(curso);
         assertEquals("RJ", aluno.obterEstadoEstuda());
