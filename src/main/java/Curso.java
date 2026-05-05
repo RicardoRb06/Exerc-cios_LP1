@@ -47,4 +47,8 @@ public class Curso {
     public String obterTipoEnsino() {
         return this.tipoEnsino.getNome();
     }
+
+    public String obterCoordenadorNome(){
+        this.coordenador.getNome();
+    }
 }
