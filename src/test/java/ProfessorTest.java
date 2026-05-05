@@ -5,6 +5,21 @@ import static org.junit.jupiter.api.Assertions.*;
 class ProfessorTest {
 
     @Test
+    public void quemDiretorCurso() {
+        Cidade cidade = new Cidade("Santos Dumont", "MG");
+        Professor professor = new Professor(cidade, "doutorado");
+        Professor professor1 = new Professor(cidade, "doutorado");
+
+        professor.setNome("Marco");
+        professor1.setNome("Sandro");
+
+        Curso curso = new Curso(cidade, professor, "superior");
+        professor1.setContratacao(curso);
+
+        assertEquals("Marco", professor1.getDiretor());
+    }
+
+    @Test
     public void qualTipoEnsinoProfessor(){
         Cidade cidade = new Cidade("Santos Dumont", "MG");
         Professor professor = new Professor(cidade, "doutorado");
