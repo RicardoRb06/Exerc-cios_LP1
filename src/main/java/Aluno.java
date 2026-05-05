@@ -21,6 +21,6 @@ public class Aluno extends Pessoa{
         if (this.curso == null) {
             throw new NullPointerException("Curso não pode ser null");
         }
-        this.curso.obterEstado();
+        return this.curso.obterEstado();
     }
 }

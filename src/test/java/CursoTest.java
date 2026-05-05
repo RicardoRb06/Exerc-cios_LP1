@@ -7,14 +7,14 @@ class CursoTest {
     @Test
     public void qualEscolaridadeCoordenador() {
         Cidade cidade = new Cidade("Santos Dumont", "MG");
-        Curso curso = new Curso(new Professor(cidade,"doutorado"));
+        Curso curso = new Curso(cidade, new Professor(cidade,"doutorado"));
         assertEquals("doutorado", curso.obterEscolaridadeCoordenador());
     }
 
     @Test
     public void verificaErroCoordenadorNull() {
         try{
-            Curso curso = new Curso(null);
+            Curso curso = new Curso(new Cidade("Santos Dumont", "MG"), null);
             fail();
         } catch (NullPointerException e){
             assertEquals("Coordenador não pode ser null", e.getMessage());
