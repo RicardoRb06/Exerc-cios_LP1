@@ -37,6 +37,10 @@ public abstract class Pessoa {
         return naturalidade.obterEstado();
     }
 
+    public String obterCidadeNaturalidade() {
+        return naturalidade.getNome();
+    }
+
     public String obterEscolaridade() {
         if(escolaridade == null){
             throw new NullPointerException("Essa pessoa não tem escolaridade");
