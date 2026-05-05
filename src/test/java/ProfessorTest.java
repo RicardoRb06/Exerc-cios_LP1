@@ -6,7 +6,11 @@ class ProfessorTest {
 
     @Test
     public void qualTipoEnsinoProfessor(){
-
+        Cidade cidade = new Cidade("Santos Dumont", "MG");
+        Professor professor = new Professor(cidade, "doutorado");
+        Curso curso = new Curso(cidade, professor, new TipoEnsino("ensino fundamental"));
+        professor.setContratacao(curso);
+        assertEquals("ensino fundamental", professor.obterTipoEnsino());
     }
 
     @Test
