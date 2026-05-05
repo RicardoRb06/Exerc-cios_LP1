@@ -49,6 +49,6 @@ public class Curso {
     }
 
     public String obterCoordenadorNome(){
-        this.coordenador.getNome();
+        return this.coordenador.getNome();
     }
 }

@@ -4,6 +4,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class AlunoTest {
 
     @Test
+    public void quemCoordenadorCurso(){
+        Cidade cidade = new Cidade("Santos Dumont", "MG");
+        Aluno aluno = new Aluno(cidade);
+        Professor professor = new Professor(cidade, "doutorado");
+        professor.setNome("Marco");
+        Curso curso = new Curso(cidade, professor, new TipoEnsino("ensino superior"));
+        aluno.setCurso(curso);
+
+        assertEquals("Marco", aluno.obterCoordenadorCurso());
+    }
+
+    @Test
     public void qualEstadoNaturalidade() {
         Cidade cidade = new Cidade("Santos Dumont", "MG");
         Aluno aluno = new Aluno(cidade);
