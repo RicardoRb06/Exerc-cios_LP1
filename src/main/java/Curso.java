@@ -1,8 +1,18 @@
 public class Curso {
     private Professor coordenador;
+    private Cidade cidade;
 
-    public Curso(Professor coordenador) {
+    public Curso(Cidade cidade, Professor coordenador) {
+        this.setCidade(cidade);
         this.setCoordenador(coordenador);
+    }
+
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
     }
 
     public Professor getCoordenador() {
@@ -18,5 +28,9 @@ public class Curso {
 
     public String obterEscolaridadeCoordenador() {
         return this.coordenador.obterEscolaridade();
+    }
+
+    public String obterEstado() {
+        return this.cidade.obterEstado();
     }
 }
