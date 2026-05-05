@@ -9,5 +9,4 @@ class AlunoTest {
         Aluno aluno = new Aluno(cidade);
         assertEquals("MG", aluno.obterEstadoNaturalidade());
     }
-  
 }

@@ -12,6 +12,13 @@ class ProfessorTest {
     }
 
     @Test
+    public void qualCidadeProfessor(){
+        Cidade cidade = new Cidade("Santos Dumont", "MG");
+        Professor professor = new Professor(cidade, "doutorado");
+        assertEquals("Santos Dumont", professor.obterCidade());
+    }
+
+    @Test
     public void verificaEscolaridadeNull() {
         try{
             Cidade cidade = new Cidade("Santos Dumont", "MG");
