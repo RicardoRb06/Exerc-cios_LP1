@@ -1,8 +1,9 @@
 public class Curso {
     private Professor coordenador;
     private Cidade cidade;
+    private TipoEnsino tipoEnsino
 
-    public Curso(Cidade cidade, Professor coordenador) {
+    public Curso(Cidade cidade, Professor coordenador, TipoEnsino tipoEnsino) {
         this.setCidade(cidade);
         this.setCoordenador(coordenador);
     }
@@ -32,5 +33,9 @@ public class Curso {
 
     public String obterEstado() {
         return this.cidade.obterEstado();
+    }
+
+    public String obterTipoEnsino() {
+        this.tipoEnsino.getNome();
     }
 }
