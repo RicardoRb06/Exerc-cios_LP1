@@ -29,4 +29,14 @@ class GrupoTest {
         }
     }
 
+    @Test
+    void deveCriticarSedeNull() {
+        try {
+            Grupo grupo = new Grupo("Grupo");
+            grupo.getSede();
+            fail();
+        } catch(NullPointerException e){
+            assertEquals("Sede não pode ser null", e.getMessage());
+        }
+    }
 }

@@ -40,4 +40,11 @@ public class Funcionario {
     public void setFilial(Filial filial) {
         this.filial = filial;
     }
+
+    public String getPaisAlocacao() {
+        if (alocacao == null){
+            throw new NullPointerException("Alocacao não pode ser null");
+        }
+        return alocacao.getPaisSede();
+    }
 }

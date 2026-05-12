@@ -21,4 +21,11 @@ public class Filial {
     public void setCidade(Cidade cidade) {
         this.cidade = cidade;
     }
+
+    public String getEstado(){
+        if (cidade == null){
+            throw new NullPointerException("Cidade não pode ser null");
+        }
+        return cidade.getNomeEstado();
+    }
 }

@@ -16,8 +16,11 @@ public class Grupo {
         this.nome = nome;
     }
 
-    public Pais getSede() {
-        return this.sede;
+    public String getSede() {
+        if (sede == null){
+            throw new NullPointerException("Sede não pode ser null");
+        }
+        return this.sede.getNome();
     }
 
     public void setSede(Pais sede) {

@@ -20,4 +20,11 @@ public class Empresa {
     public void setGrupo(Grupo grupo) {
         this.grupo = grupo;
     }
+
+    public String getPaisSede() {
+        if (grupo == null){
+            throw new NullPointerException("Grupo não pode ser null");
+        }
+        return grupo.getNomePaisSede();
+    }
 }
