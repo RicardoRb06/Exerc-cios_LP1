@@ -39,5 +39,11 @@ public class Grupo {
     public String getNomePresidente() {
         return this.presidente.getNome();
     }
-}
+
+    public String escolaridadePresidente(){
+        if (presidente == null){
+            throw new NullPointerException("Presidente não pode ser null");
+        }
+        return presidente.getEscolaridade();
+    }
 }

@@ -19,7 +19,7 @@ public class Funcionario {
     }
 
     public Escolaridade getEscolaridade() {
-        return this.escolaridade;
+        return this.escolaridade.getEscolaridade();
     }
 
     public void setEscolaridade(Escolaridade escolaridade) {
