@@ -5,9 +5,8 @@ public class Funcionario {
     private Departamento alocacao;
     private Filial filial;
 
-    public Funcionario(String nome, Departamento alocacao) {
+    public Funcionario(String nome) {
         this.setNome(nome);
-        this.setAlocacao(alocacao);
     }
 
     public String getNome() {
@@ -18,7 +17,7 @@ public class Funcionario {
         this.nome = nome;
     }
 
-    public Escolaridade getEscolaridade() {
+    public String getEscolaridade() {
         return this.escolaridade.getEscolaridade();
     }
 
