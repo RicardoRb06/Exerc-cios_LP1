@@ -29,4 +29,15 @@ class FilialTest {
             assertEquals("Cidade não pode ser null", e.getMessage());
         }
     }
+
+    @Test
+    void deveRetornarNomeDiretor() {
+        Empresa empresa = new Empresa();
+        Filial filial = new Filial(empresa);
+        Funcionario funcionario = new Funcionario("Fulano");
+
+        empresa.setDiretor(funcionario);
+
+        assertEquals("Fulano", filial.getNomeDiretor());
+    }
 }

@@ -28,4 +28,8 @@ public class Filial {
         }
         return cidade.getNomeEstado();
     }
+
+    public String getNomeDiretor(){
+        return empresa.getDiretor();
+    }
 }

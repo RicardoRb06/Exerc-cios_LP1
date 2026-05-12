@@ -5,8 +5,11 @@ public class Empresa {
     public Empresa() {
     }
 
-    public Funcionario getDiretor() {
-        return diretor;
+    public String getDiretor() {
+        if (diretor == null){
+            throw new NullPointerException("Diretor não pode ser null");
+        }
+        return diretor.getNome();
     }
 
     public void setDiretor(Funcionario diretor) {
