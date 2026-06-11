@@ -85,4 +85,14 @@ public class Curso {
 
         return alunoNomes;
     }
+
+    public ArrayList<Disciplina> getDisciplinas() {
+        ArrayList<Disciplina> disciplinas = new ArrayList<Disciplina>();
+
+        for (Turma turmas : this.turmas){
+            disciplinas.add(turmas.getDisciplina());
+        }
+
+        return disciplinas;
+    }
 }
