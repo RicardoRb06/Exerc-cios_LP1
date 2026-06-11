@@ -53,7 +53,7 @@ public class Turma {
         ArrayList<String> alunosNome = new ArrayList<String>();
 
         for(Aluno aluno : alunos){
-            alunosNome.add(aluno);
+            alunosNome.add(aluno.getNome());
         }
 
         return alunosNome;
