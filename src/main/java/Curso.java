@@ -52,4 +52,11 @@ public class Curso {
         }
     }
 
+    public void professorNomes(){
+        ArrayList<String> professorNomes = new ArrayList<String>();
+
+        for (Turma turma : this.turmas){
+            professorNomes.add(turma.getNomeProfessor());
+        }
+    }
 }
