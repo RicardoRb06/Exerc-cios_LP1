@@ -58,4 +58,8 @@ public class Turma {
 
         return alunosNome;
     }
+
+    public boolean isAlunoInTurma(Aluno aluno) {
+        return this.alunos.contains(aluno);
+    }
 }
