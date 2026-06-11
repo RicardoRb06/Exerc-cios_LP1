@@ -59,7 +59,7 @@ public class Curso {
             professorNomes.add(turma.getNomeProfessor());
         }
 
-        return  professorNomes();
+        return  getAlunoNomes();
     }
 
     public ArrayList<String> getAlunoNomesTurma(Turma turma){
