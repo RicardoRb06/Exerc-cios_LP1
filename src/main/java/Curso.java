@@ -6,7 +6,7 @@ public class Curso {
 
     public Curso() {
         this.turmas = new ArrayList<Turma>();
-        this.alunos = new ArrayList<Aluno>()
+        this.alunos = new ArrayList<Aluno>();
     }
 
     public Curso(Aluno ... alunos) {
