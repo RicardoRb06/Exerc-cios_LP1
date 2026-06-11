@@ -48,4 +48,14 @@ public class Turma {
     public String getNomeProfessor(){
         return this.professor.getNome();
     }
+
+    public ArrayList<String> getNomeAlunos(){
+        ArrayList<String> alunosNome = new ArrayList<String>();
+
+        for(Aluno aluno : alunos){
+            alunosNome.add(aluno);
+        }
+
+        return alunosNome;
+    }
 }
