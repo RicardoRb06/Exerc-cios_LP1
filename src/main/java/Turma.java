@@ -62,4 +62,11 @@ public class Turma {
     public boolean isAlunoInTurma(Aluno aluno) {
         return this.alunos.contains(aluno);
     }
+
+    public void removeAluno(Aluno aluno) {
+        if(!this.alunos.contains(aluno)){
+            throw new IllegalArgumentException("Aluno não esta matriculado nesse curso");
+        }
+        this.alunos.remove(aluno);
+    }
 }
