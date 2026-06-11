@@ -52,7 +52,7 @@ public class Curso {
         }
     }
 
-    public ArrayList<String> professorNomes(){
+    public ArrayList<String> getProfessorNomes(){
         ArrayList<String> professorNomes = new ArrayList<String>();
 
         for (Turma turma : this.turmas){
@@ -62,7 +62,7 @@ public class Curso {
         return  professorNomes();
     }
 
-    public ArrayList<String> alunoNomesTurma(Turma turma){
+    public ArrayList<String> getAlunoNomesTurma(Turma turma){
         if(!this.turmas.contains(turma)) {
             throw new IllegalArgumentException("Turma não esta no curso");
         }
