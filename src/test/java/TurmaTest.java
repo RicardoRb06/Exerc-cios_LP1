@@ -23,13 +23,15 @@ class TurmaTest {
         String alunoNome0 = "Ricardo";
         String alunoNome1 = "Pedro";
 
-        Aluno aluno0 = new Aluno(professor, disciplina, alunoNome0);
-        Aluno aluno1 = new Aluno(professor, disciplina, alunoNome1);
+        Aluno aluno0 = new Aluno(alunoNome0);
+        Aluno aluno1 = new Aluno(alunoNome1);
 
-        ArrayList<String> nomesAlunos = {aluno0, aluno1};
+        ArrayList<String> nomesAlunos = new ArrayList<String>();
+        nomesAlunos.add(alunoNome0);
+        nomesAlunos.add(alunoNome1);
+
         Turma turma = new Turma(professor, disciplina, aluno0, aluno1);
 
         assertEquals(nomesAlunos, turma.getNomeAlunos());
     }
-
 }

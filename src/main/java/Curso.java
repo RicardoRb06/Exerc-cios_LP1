@@ -46,7 +46,7 @@ public class Curso {
         this.turmas.add(turma);
 
         for(Aluno aluno : turma.getAlunos()){
-            if(this.alunos.contains(aluno)){
+            if(!this.alunos.contains(aluno)){
                 this.alunos.add(aluno);
             }
         }
@@ -59,7 +59,7 @@ public class Curso {
             professorNomes.add(turma.getNomeProfessor());
         }
 
-        return  getAlunoNomes();
+        return professorNomes;
     }
 
     public ArrayList<String> getAlunoNomesTurma(Turma turma){
