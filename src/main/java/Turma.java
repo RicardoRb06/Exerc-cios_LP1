@@ -44,4 +44,8 @@ public class Turma {
     public void setAlunos(ArrayList<Aluno> alunos) {
         this.alunos = alunos;
     }
+
+    public String getNomeProfessor(){
+        return this.professor.getNome();
+    }
 }
