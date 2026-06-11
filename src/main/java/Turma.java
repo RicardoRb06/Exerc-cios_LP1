@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+public class Turma {
+
+    private Professor professor;
+    private Disciplina disciplina;
+    private ArrayList<Aluno> alunos;
+
+    public Turma(Professor professor, Disciplina disciplina) {
+        this.professor = professor;
+        this.disciplina = disciplina;
+        this.alunos = new ArrayList<Aluno>();
+    }
+
+    public Turma(Professor professor, Disciplina disciplina, Aluno ... aluno) {
+        this.professor = professor;
+        this.disciplina = disciplina;
+        this.alunos = new ArrayList<Aluno>();
+        for (Aluno alunos : aluno) {
+            this.alunos.add(aluno);
+        }
+    }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
+
+    public ArrayList<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(ArrayList<Aluno> alunos) {
+        this.alunos = alunos;
+    }
+}
