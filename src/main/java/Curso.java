@@ -59,4 +59,16 @@ public class Curso {
             professorNomes.add(turma.getNomeProfessor());
         }
     }
+
+    public void alunoNomesTurma(Turma turma){
+        if(!this.turmas.contains(turma)) {
+            throw new IllegalArgumentException("Turma não esta no curso");
+        }
+
+        ArrayList<String> alunoNomes = new ArrayList<String>();
+
+        for (Aluno aluno : turma.getAlunos()){
+            alunoNomes.add(aluno.getNome());
+        }
+    }
 }
