@@ -95,4 +95,8 @@ public class Curso {
 
         return disciplinas;
     }
+
+    public boolean isAlunoInTurma(Aluno aluno) {
+        return this.alunos.contains(aluno);
+    }
 }
