@@ -75,4 +75,14 @@ public class Curso {
 
         return alunoNomes;
     }
+
+    public ArrayList<String> getAlunoNomes() {
+        ArrayList<String> alunoNomes = new ArrayList<String>();
+
+        for (Aluno aluno : this.alunos){
+            alunoNomes.add(aluno.getNome());
+        }
+
+        return alunoNomes;
+    }
 }
