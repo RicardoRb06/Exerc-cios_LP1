@@ -106,4 +106,11 @@ public class Curso {
         }
         this.alunos.remove(aluno);
     }
+
+    public void removeTurma(Turma turma) {
+        if(!this.turmas.contains(turma)){
+            throw new IllegalArgumentException("Turma não esta presente no curso");
+        }
+        this.turmas.remove(turma);
+    }
 }
