@@ -12,11 +12,11 @@ public class Turma {
         this.alunos = new ArrayList<Aluno>();
     }
 
-    public Turma(Professor professor, Disciplina disciplina, Aluno ... aluno) {
+    public Turma(Professor professor, Disciplina disciplina, Aluno ... alunos) {
         this.professor = professor;
         this.disciplina = disciplina;
         this.alunos = new ArrayList<Aluno>();
-        for (Aluno alunos : aluno) {
+        for (Aluno aluno : alunos) {
             this.alunos.add(aluno);
         }
     }
