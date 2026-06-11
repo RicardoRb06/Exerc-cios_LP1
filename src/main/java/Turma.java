@@ -29,6 +29,14 @@ public class Turma {
         this.professor = professor;
     }
 
+    public Disciplina getDisciplina() {
+        return disciplina;
+    }
+
+    public void setDisciplina(Disciplina disciplina) {
+        this.disciplina = disciplina;
+    }
+
     public ArrayList<Aluno> getAlunos() {
         return alunos;
     }

@@ -17,6 +17,15 @@ public class Curso {
         }
     }
 
+    public Curso(Turma ... turmas) {
+        this.turmas = new ArrayList<Turma>();
+        this.alunos = new ArrayList<Aluno>();
+
+        for(Turma turma : turmas){
+            this.matricularTurma(turma);
+        }
+    }
+
     public ArrayList<Turma> getTurmas() {
         return turmas;
     }
@@ -32,4 +41,15 @@ public class Curso {
     public void setAlunos(ArrayList<Aluno> alunos) {
         this.alunos = alunos;
     }
+
+    public void matricularTurma(Turma turma) {
+        this.turmas.add(turma);
+
+        for(Aluno aluno : turma.getAlunos()){
+            if(this.alunos.contains(aluno)){
+                this.alunos.add(aluno);
+            }
+        }
+    }
+
 }
